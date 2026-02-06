@@ -4,170 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    h1{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 80px;
-        background-color: darkgreen;
-
-    }
-    h2{
-        display: flex;
-        justify-content: center;
-    }
-    .img{
-        height: 300px;
-        width: 300px;
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    </style>
+    <link rel="stylesheet" href="trollstyle.css">
+    
 </head>
 
 <body>
     <h1>Troll Game 1: The Trollening</h1>
 
-    <input id="myInput" onchange="setName()">
-    <button id="start" onclick="updateView()">Start</button>
     <div id="spill"></div>
     
 
-    <script>
-    let name = "asd";
-    let trollHP = 100;
-    let stamina = 20;
-    let coins = 0;
-    let strength = 10;
-    let weapon = "";
-    let staminaCost = 1;
-    let berries = 10;
-    let meats = 5;
-    let bigMeals = 2;
+    <script src="Javascripts/variables.js"></script>
+    <script src="Javascripts/updateViewFunction.js"></script>
+    <script src="Javascripts/metaGameFunction.js"></script>
+    <script src="Javascripts/combatPlayerActions.js"></script>
+    <script src="Javascripts/shopSystem.js"></script>
+    <script src="Javascripts/enemiesCombatActions.js"></script>
 
-    updateView();
-    /*function setName(){
-        name = document.getElementById("myInput").value;
-        console.log(name);
-        updateView();
-    } */
-
-    function updateView(){
-    document.getElementById("spill").innerHTML = /*HTML*/`
-    <h2>Velkommen ${name}</h2>
-    <br>
-    <img class="img" src="troll.jpg">
-    <br>
-    TrollHP: ${trollHP}
-    Coins: ${coins}
-    Stamina: ${stamina}
-    Strength: ${strength}
-    Weapon: ${weapon}
-    Berry: ${berries}
-    Meat: ${meats}
-    Big Meal: ${bigMeals}
-
-    <button onclick="hitTroll()">Attack</button>
-
-    <button onclick="pickUpCoins()">Pick up Coins</button>
-
-    <button onclick="pickUpWeapon('Hammer', 20, 3)">Pick up Hammer 20str Stam cost 3</button>
-    <button onclick="pickUpWeapon('Axe', 50, 5)">Pick up Axe 50str Stam cost 5</button>
-    <button onclick="pickUpWeapon('Chainsaw', 150, 15)">Pick up Chainsaw 150str Stam cost 15</button>
-
-    <button onclick="eatFood('Berry', 10)">Eat Berry</button>
-    <button onclick="eatMeat('Meat', 25)">Eat Meat</button>
-    <button onclick="eatMeal('BigMeal', 50)">Eat Big Meal</button>
-    `
-    document.getElementById("myInput").style.visibility = "hidden";
-    document.getElementById("start").style.visibility = "hidden";
-    
-    }
-
-    function pickUpCoins(){
-        coins += 10;
-        updateView();
-    }
-
-    function hitTroll(){
-        if (stamina >= staminaCost)
-        {
-        trollHP -= strength;
-        stamina -= staminaCost;
-        updateView();
-        }
-        if (trollHP <= 0){youWin()};
-    }
-
-    function pickUpWeapon(newWeapon, newStrength, newStaminaCost){
-        weapon = newWeapon
-        strength = newStrength
-        staminaCost = newStaminaCost
-        updateView();
-    }
-
-    function eatFood(food, newStamina){
-        if (berries >= 1)
-        {
-        berries -= 1
-        stamina = newStamina
-        updateView()
-        }
-    }
-    function eatMeat(food, newStamina){
-        if (meats >= 1)
-        {
-        meats -= 1
-        stamina = newStamina
-        updateView()
-        }
-    }
-    function eatMeal(food, newStamina){
-        if (bigMeals >= 1)
-        {
-        bigMeals -= 1
-        stamina = newStamina
-        updateView()
-        }
-    }
-
-    function youWin(){
-        document.getElementById("spill").innerHTML = /*HTML*/` <h2>"Gratulerer"</h2>
-        <br>
-        <button onclick="restartGame()">Restart</button>
-        `
-    }
-
-    function restartGame(){
-        name = "asd";
-        trollHP = 100;
-        stamina = 20;
-        coins = 0;
-        strength = 10;
-        weapon = "";
-        staminaCost = 1;
-        berries = 10;
-        meats = 5;
-        bigMeals = 2;
-        
-        
-        updateView()
-    }
-    
-
-
-    </script>
     
 </body>
-
-
 
 </html>

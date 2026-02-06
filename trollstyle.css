@@ -1,0 +1,109 @@
+body{
+    background-image: url("https://wallpapers.com/images/hd/mysterious-1972-x-1024-wallpaper-gdrrzmhlqfvdi03r.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 80px;
+    color: green;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    color: royalblue;
+    text-shadow: 2px 2px 5px gold;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    color: red;
+    text-shadow: 2px 2px 5px gold;
+}
+.img{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.infoHUD{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+button{
+    height: 35px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+button:hover{
+    scale: 120%;
+}
+#hammerButton{
+    position: absolute;
+    top: 340px;
+    left: 100px;
+}
+#axeButton{
+    position: absolute;
+    top: 400px;
+    left: 100px;
+}
+#sawButton{
+    position: absolute;
+    top: 460px;
+    left: 100px;
+}
+#berryHUD{
+    position: absolute;
+    top: 340px;
+    right: 100px;
+}
+#meatHUD{
+    position: absolute;
+    top: 400px;
+    right: 100px;
+}
+#mealHUD{
+    position: absolute;
+    top: 460px;
+    right: 100px;
+}
+#coinsHUD{
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    color: gold;
+}
+#attackButton{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+#restartButton{
+    position: absolute;
+    align-self: center;
+}
+#spill{
+    color: red;
+    text-shadow: 2px 2px 4px royalblue;
+}
+input{
+    width: 200px;
+    display: flex;
+    align-self: center; 
+}
